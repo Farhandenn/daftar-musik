@@ -1,69 +1,90 @@
+/* Background utama */
 body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  padding: 20px;
-  color: #e5e7eb;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #0b1a2f, #102a4c);
+  margin: 0;
+  padding: 30px;
+  color: #e6f1ff;
 }
 
+/* Card utama */
 .container {
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
-  background: #020617;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  border: 1px solid #1f2937;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
+/* Judul */
 h1 {
   text-align: center;
-  color: #38bdf8;
+  color: #66d9ff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: 1px solid #334155;
-  background: #020617;
-  color: #e5e7eb;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #38bdf8;
-  box-shadow: 0 0 6px rgba(56,189,248,0.4);
-}
-
-button {
-  background: #38bdf8;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  color: #0f172a;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background: #0ea5e9;
-}
-
-.card {
-  border: 1px solid #1f2937;
-  padding: 14px;
-  border-radius: 10px;
-  margin-top: 12px;
-  background: #020617;
-}
-
+/* Link tambah */
 a {
+  color: #7ce3ff;
   text-decoration: none;
-  color: #38bdf8;
   font-weight: bold;
 }
 
 a:hover {
-  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  background: rgba(102,217,255,0.15);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Hover baris */
+tr:hover {
+  background: rgba(255,255,255,0.05);
+  transition: 0.2s;
+}
+
+/* Tombol */
+button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* Tombol edit */
+.btn-edit {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+/* Tombol hapus */
+.btn-hapus {
+  background: linear-gradient(45deg, #ff6b6b, #ff3b3b);
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
