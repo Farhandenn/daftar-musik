@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit Musik</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Form Ubah Musik</h1>
+
+  <form id="formUbah">
+
+    <label>Judul</label>
+    <input type="text" id="judul" required>
+
+    <label>Nama Artis</label>
+    <input type="text" id="artis" required>
+
+    <label>Genre</label>
+    <input type="text" id="genre" required>
+
+    <button type="submit">Simpan</button>
+    <br><br>
+    <a href="daftar.html">Daftar Musik</a>
+
+  </form>
+</div>
+
+<script type="module">
+import { ambildatamusik, ubahdatamusik } from './main.js';
+
+// ambil id dari URL
+const params = new URLSearchParams(window.location.search);
+const idmusik = params.get('id');
+
+// ambil data dari firestore
+const musik = await ambildatamusik(idmusik);
+
+// isi form
+document.getElementById('judul').value = musik.judul;
+document.getElementById('artis').value = musik.artis;
+document.getElementById('genre').value = musik.genre;
+
+// submit update
+const form = document.getElementById('formUbah');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  ubahdatamusik(idmusik);
+});
+</script>
+
+</body>
+</html>

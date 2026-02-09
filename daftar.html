@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>daftar film dan drama</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+      <h1>daftar musik</h1>
+      <a href="tambah.html" class="button">Tambah musik</a>
+      <a href="index.html">Awal Halaman</a>
+      <table>
+        <thead>
+          <tr>
+            <th>judul musik</th>
+            <th>nama artis</th>
+            <th>genre</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tabelData"></tbody>
+      </table>
+    </div>
+    <script type="module">
+      import { daftarmusik } from './main.js'
+
+      // eksekusi fungsi menampilkan daftar film
+      daftarmusik()
+    </script>
+</body>
+</html>

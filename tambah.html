@@ -1,0 +1,44 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tambah Musik</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Form Tambah Musik</h1>
+
+  <form id="formTambah">
+
+    <label>Judul</label>
+    <input type="text" id="judul" required>
+
+    <label>Nama Artis</label>
+    <input type="text" id="artis" required>
+
+    <label>Genre</label>
+    <input type="text" id="genre" required>
+
+    <button type="submit">Simpan</button>
+
+  </form>
+
+  <a href="daftar.html">Daftar Musik</a>
+</div>
+
+<script type="module">
+  import { tambahmusik } from './main.js';
+
+  const formTambah = document.getElementById('formTambah');
+
+  formTambah.addEventListener('submit', function(e) {
+    e.preventDefault();
+    tambahmusik();
+  });
+</script>
+
+</body>
+</html>
